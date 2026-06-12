@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>スロット</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="machine">
+    <h1 class="title">SLOT</h1>
+
+    <div class="reels-wrapper">
+      <div class="reels" id="reels">
+        <!-- JS が buildReels() でリールを注入する -->
+      </div>
+      <div class="win-line" id="winLine"></div>
+    </div>
+
+    <button class="spin-btn" id="spinBtn">
+      <span>SPIN</span>
+    </button>
+
+    <p class="result-msg" id="resultMsg"></p>
+
+    <!-- 当選オーバーレイ -->
+    <div class="jackpot-overlay" id="jackpotOverlay">
+      <div class="jackpot-text">🎉 当たり！ 🎉</div>
+    </div>
+  </div>
+
+  <!-- 1. 設定ファイル（画像・挙動）を先に読み込む -->
+  <script src="images.js"></script>
+  <!-- 2. ロジック -->
+  <script src="slot.js"></script>
+</body>
+</html>
